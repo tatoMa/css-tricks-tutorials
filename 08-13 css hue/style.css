@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.bg-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    45deg,
+    hsl(240deg 100% 20%) 0%,
+    hsl(289deg 100% 21%) 11%,
+    hsl(315deg 100% 27%) 22%,
+    hsl(329deg 100% 36%) 33%,
+    rgb(250, 160, 115) 50%,
+    hsl(357deg 91% 59%) 56%,
+    hsl(17deg 100% 59%) 67%,
+    hsl(34deg 100% 53%) 78%,
+    hsl(45deg 100% 50%) 89%,
+    hsl(55deg 100% 50%) 100%
+  );
+  filter: hue-rotate(0);
+  transform: rotate(0deg) scale(1.5);
+  animation: bg-ani 5s linear infinite;
+}
+@keyframes bg-ani {
+  100% {
+    filter: hue-rotate(360);
+    transform: rotate(360deg) scale(1.5);
+  }
+}
+.hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.hero .title {
+  font-size: 4rem;
+  text-transform: uppercase;
+  line-height: 80%;
+}
+.hero .sub-title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+.hero .btn {
+  border: none;
+  background-color: white;
+  font-size: 2rem;
+  padding: 8px 24px;
+}
